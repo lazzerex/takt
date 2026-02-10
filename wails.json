@@ -1,0 +1,20 @@
+{
+  "$schema": "https://wails.io/schemas/config.v2.json",
+  "name": "takt",
+  "outputfilename": "takt",
+  "frontend:install": "",
+  "frontend:build": "",
+  "frontend:dev:watcher": "",
+  "frontend:dev:serverUrl": "",
+  "author": {
+    "name": "Takt Team",
+    "email": "hello@takt.app"
+  },
+  "info": {
+    "companyName": "Takt",
+    "productName": "Takt Auto Clicker",
+    "productVersion": "1.0.0",
+    "copyright": "Copyright © 2026",
+    "comments": "Fast, Clean, Efficient Auto Clicker"
+  }
+}
