@@ -1,6 +1,39 @@
-# Takt Auto Clicker
+<h1 align="center">Takt Auto Clicker</h1>
 
-A safe and minimal auto clicker built with **Go** and **Wails** for Windows
+<p align="center">
+  <img width="427" height="653" alt="takt"
+       src="https://github.com/user-attachments/assets/36c90eb3-d8a7-4af6-a97b-66d342482b8b" />
+</p>
+
+<p align="center">
+  <strong>A safe and minimal auto clicker built with <b>Go</b> and <b>Wails</b> for Windows</strong>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Wails-DF0000?style=flat&logo=go&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Windows-0078D6?style=flat&logo=windows&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Desktop%20App-4B32C3?style=flat&logo=electron&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Lightweight-2ECC71?style=flat"/>
+  <img src="https://img.shields.io/badge/Open%20Source-000000?style=flat&logo=github&logoColor=white"/>
+</p>
+
+<p align="center">
+  <!-- Stars -->
+  <img src="https://img.shields.io/github/stars/lazzerex/takt?style=flat&logo=github&logoColor=white"/>
+  <!-- Forks -->
+  <img src="https://img.shields.io/github/forks/lazzerex/takt?style=flat&logo=github&logoColor=white"/>
+  <!-- Open Issues -->
+  <img src="https://img.shields.io/github/issues/lazzerex/takt?style=flat&color=red"/>
+  <!-- Pull Requests -->
+  <img src="https://img.shields.io/github/issues-pr/lazzerex/takt?style=flat&color=yellow"/>
+  <!-- Last Commit -->
+  <img src="https://img.shields.io/github/last-commit/lazzerex/takt?style=flat"/>
+  <!-- Repo Size -->
+  <img src="https://img.shields.io/github/repo-size/lazzerex/takt?style=flat"/>
+</p>
+
+
 
 ## Features
 
