@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Takt</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',sans-serif;background:#0a0a0a;color:#fff;height:100vh;overflow:hidden}
+#app{display:flex;flex-direction:column;height:100vh;padding:25px;max-width:480px;margin:0 auto}
+.header{margin-bottom:25px;text-align:center}
+.header h1{font-size:38px;font-weight:900;text-transform:uppercase;display:flex;align-items:center;justify-content:center;gap:12px}
+.header h1 i{color:#00d9ff}
+.header .subtitle{color:#888;font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-top:5px}
+.content{background:rgba(20,20,20,0.6);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:25px;flex:1;display:flex;flex-direction:column;gap:20px;overflow-y:auto;min-height:0}
+.content::-webkit-scrollbar{width:5px}
+.content::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.2);border-radius:3px}
+.setting-group{display:flex;flex-direction:column;gap:10px}
+.setting-label{font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1.5px;display:flex;align-items:center;gap:8px}
+.setting-label i{color:#00d9ff}
+input{width:100%;background:rgba(0,0,0,0.4);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:16px;font-size:22px;font-weight:700;font-family:monospace;color:#00d9ff;text-align:center;outline:none}
+input:focus{border-color:#00d9ff}
+.segmented-control{display:flex;background:rgba(0,0,0,0.4);padding:4px;border-radius:12px;border:1px solid rgba(255,255,255,0.1)}
+.segmented-control button{flex:1;padding:12px;background:transparent;border:none;border-radius:8px;color:#888;font-size:13px;font-weight:700;cursor:pointer;transition:all 0.2s}
+.segmented-control button:hover:not(.active){color:#fff;background:rgba(255,255,255,0.05)}
+.segmented-control button.active{background:#00d9ff;color:#000}
+.status-card{margin-top:auto;background:rgba(0,0,0,0.3);border-radius:14px;padding:14px;display:flex;align-items:center;justify-content:space-between;border:1px solid rgba(255,255,255,0.1)}
+.status-info{display:flex;align-items:center;gap:10px}
+.status-dot{width:8px;height:8px;background:#888;border-radius:50%}
+.status-dot.running{background:#00ff88}
+.status-text{font-weight:700;font-size:13px;text-transform:uppercase;color:#888}
+.status-text.running{color:#00ff88}
+.footer{margin-top:20px;display:flex;flex-direction:column;gap:12px}
+.btn{width:100%;padding:18px;border:none;border-radius:14px;font-size:16px;font-weight:800;text-transform:uppercase;letter-spacing:1px;cursor:pointer;transition:all 0.2s}
+.btn-primary{background:#00ff88;color:#000000}
+.btn-primary:hover{transform:translateY(-2px);opacity:0.9}
+.btn-danger{background:#ff3860;color:#fff}
+.btn-danger:hover{transform:translateY(-2px);opacity:0.9}
+.hotkey-hint{text-align:center;color:#888;font-size:11px;font-weight:600}
+.hotkey-badge{background:rgba(255,255,255,0.1);padding:2px 6px;border-radius:4px;font-family:monospace}
+</style>
+</head>
+<body>
+<div id="app">
+<div class="header">
+<h1><i class="fa-solid fa-bolt"></i> TAKT</h1>
+<div class="subtitle">Auto Clicker</div>
+</div>
+<div class="content">
+<div class="setting-group">
+<label class="setting-label"><i class="fa-solid fa-clock"></i> Interval (seconds)</label>
+<input type="number" id="interval" value="1.0" step="0.1" min="0.01">
+</div>
+<div class="setting-group">
+<label class="setting-label"><i class="fa-solid fa-computer-mouse"></i> Mouse Button</label>
+<div class="segmented-control" id="buttonControl">
+<button class="active" data-value="left">Left</button>
+<button data-value="right">Right</button>
+<button data-value="middle">Middle</button>
+</div>
+</div>
+<div class="setting-group">
+<label class="setting-label"><i class="fa-solid fa-hand-pointer"></i> Type</label>
+<div class="segmented-control" id="typeControl">
+<button class="active" data-value="single">Single</button>
+<button data-value="double">Double</button>
+</div>
+</div>
+<div class="status-card">
+<div class="status-info">
+<span class="status-dot" id="statusDot"></span>
+<span class="status-text" id="statusText">Idle</span>
+</div>
+<div style="color:#888;font-size:11px;font-weight:600">READY</div>
+</div>
+</div>
+<div class="footer">
+<button class="btn btn-primary" id="toggleBtn"><i class="fa-solid fa-play"></i> Start</button>
+<div class="hotkey-hint"><span class="hotkey-badge">Ctrl+S</span> to toggle</div>
+</div>
+</div>
+<script src="wails/runtime/runtime.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
