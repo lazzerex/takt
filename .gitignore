@@ -1,0 +1,50 @@
+# Build output
+build/
+bin/
+
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+go.work
+go.sum
+
+# Frontend
+node_modules/
+frontend/node_modules/
+frontend/build/
+frontend/wailsjs/
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.code-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Wails
+.wails/
+*.syso
+
+# Debug
+*.pprof
+*.prof
+debug
+
+# Temporary
+*.tmp
+*.temp
+*.bak
+*.cache
