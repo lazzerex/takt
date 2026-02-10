@@ -34,6 +34,14 @@
 </p>
 
 
+<p align="center">
+  <a href="https://github.com/lazzerex/takt/releases/latest">
+    <img src="https://img.shields.io/badge/Download-Windows%20.exe-blue?style=for-the-badge&logo=windows"/>
+  </a>
+</p>
+
+
+
 
 ## Features
 
